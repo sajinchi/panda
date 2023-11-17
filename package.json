@@ -1,0 +1,33 @@
+{
+  "name": "frontend",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "antd": "^5.11.0",
+    "next": "latest",
+    "react": "latest",
+    "react-dom": "latest",
+    "react-double-range-slider": "^3.0.1",
+    "react-icons": "^4.11.0",
+    "react-responsive-carousel": "^3.2.23",
+    "swiper": "^10.3.1"
+  },
+  "devDependencies": {
+    "@types/node": "latest",
+    "@types/react": "latest",
+    "@types/react-dom": "latest",
+    "autoprefixer": "latest",
+    "eslint": "latest",
+    "eslint-config-next": "latest",
+    "postcss": "latest",
+    "tailwind-scrollbar": "^3.0.5",
+    "tailwindcss": "latest",
+    "typescript": "latest"
+  }
+}
