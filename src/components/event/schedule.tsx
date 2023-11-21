@@ -2,101 +2,126 @@
 import React, { useState } from "react";
 import Image from "next/image";
 
+interface Event {
+  image: string;
+  time: string;
+  act_type: string;
+  artist: string;
+}
+
+interface ScheduleTypes {
+  days: Event[];
+}
+
 const Schedule = () => {
-  const data = [
-    [
-      {
-        image: "/artist1.png",
-        time: "10:00 AM - 12:00 PM",
-        act_type: "Opening Act",
-        artist: "Trishna Gurung",
-      },
-      {
-        image: "/artist2.png",
-        time: "10:00 PM - 11:00 PM",
-        act_type: "Opening Act",
-        artist: "Trishna Gurung",
-      },
-      {
-        image: "/artist3.png",
-        time: "8:00 PM - 12:00 PM",
-        act_type: "Opening Act",
-        artist: "Trishna Gurung",
-      },
-      {
-        image: "/artist1.png",
-        time: "8:00 PM - 12:00 PM",
-        act_type: "Opening Act",
-        artist: "Trishna Gurung",
-      },
-    ],
-    [
-      {
-        image: "/artist2.png",
-        time: "8:00 PM - 12:00 PM",
-        act_type: "Opening Act",
-        artist: "Trishna Gurung",
-      },
-      {
-        image: "/artist3.png",
-        time: "8:00 PM - 12:00 PM",
-        act_type: "Opening Act",
-        artist: "Trishna Gurung",
-      },
-      {
-        image: "/artist3.png",
-        time: "8:00 PM - 12:00 PM",
-        act_type: "Opening Act",
-        artist: "Trishna Gurung",
-      },
-    ],
-    [
-      {
-        image: "/artist1.png",
-        time: "10:00 AM - 12:00 PM",
-        act_type: "Opening Act",
-        artist: "Trishna Gurung",
-      },
-      {
-        image: "/artist2.png",
-        time: "10:00 PM - 11:00 PM",
-        act_type: "Opening Act",
-        artist: "Trishna Gurung",
-      },
-      {
-        image: "/artist3.png",
-        time: "8:00 PM - 12:00 PM",
-        act_type: "Opening Act",
-        artist: "Trishna Gurung",
-      },
-      {
-        image: "/artist1.png",
-        time: "8:00 PM - 12:00 PM",
-        act_type: "Opening Act",
-        artist: "Trishna Gurung",
-      },
-    ],
-    [
-      {
-        image: "/artist2.png",
-        time: "8:00 PM - 12:00 PM",
-        act_type: "Opening Act",
-        artist: "Trishna Gurung",
-      },
-      {
-        image: "/artist3.png",
-        time: "8:00 PM - 12:00 PM",
-        act_type: "Opening Act",
-        artist: "Trishna Gurung",
-      },
-    ],
+  const [selectedDay, setSelectedDay] = useState<number>(0);
+  const ScheduleData: ScheduleTypes[] = [
+    {
+      days: [
+        {
+          image: "/artist1.png",
+          time: "10:00 AM - 12:00 PM",
+          act_type: "Opening Act",
+          artist: "Trishna Gurung",
+        },
+        {
+          image: "/artist2.png",
+          time: "10:00 PM - 11:00 PM",
+          act_type: "Opening Act",
+          artist: "Trishna Gurung",
+        },
+        {
+          image: "/artist3.png",
+          time: "8:00 PM - 12:00 PM",
+          act_type: "Opening Act",
+          artist: "Trishna Gurung",
+        },
+        {
+          image: "/artist1.png",
+          time: "8:00 PM - 12:00 PM",
+          act_type: "Opening Act",
+          artist: "Trishna Gurung",
+        },
+      ],
+    },
+    {
+      days: [
+        {
+          image: "/artist1.png",
+          time: "10:00 AM - 12:00 PM",
+          act_type: "Opening Act",
+          artist: "Trishna Gurung",
+        },
+        {
+          image: "/artist2.png",
+          time: "10:00 PM - 11:00 PM",
+          act_type: "Opening Act",
+          artist: "Trishna Gurung",
+        },
+      ],
+    },
+    {
+      days: [
+        {
+          image: "/artist1.png",
+          time: "10:00 AM - 12:00 PM",
+          act_type: "Opening Act",
+          artist: "Trishna Gurung",
+        },
+        {
+          image: "/artist2.png",
+          time: "10:00 PM - 11:00 PM",
+          act_type: "Opening Act",
+          artist: "Trishna Gurung",
+        },
+        {
+          image: "/artist3.png",
+          time: "8:00 PM - 12:00 PM",
+          act_type: "Opening Act",
+          artist: "Trishna Gurung",
+        },
+        {
+          image: "/artist1.png",
+          time: "8:00 PM - 12:00 PM",
+          act_type: "Opening Act",
+          artist: "Trishna Gurung",
+        },
+        {
+          image: "/artist2.png",
+          time: "10:00 PM - 11:00 PM",
+          act_type: "Opening Act",
+          artist: "Trishna Gurung",
+        },
+      ],
+    },
+    {
+      days: [
+        {
+          image: "/artist1.png",
+          time: "10:00 AM - 12:00 PM",
+          act_type: "Opening Act",
+          artist: "Trishna Gurung",
+        },
+        {
+          image: "/artist3.png",
+          time: "8:00 PM - 12:00 PM",
+          act_type: "Opening Act",
+          artist: "Trishna Gurung",
+        },
+        {
+          image: "/artist1.png",
+          time: "8:00 PM - 12:00 PM",
+          act_type: "Opening Act",
+          artist: "Trishna Gurung",
+        },
+      ],
+    },
   ];
 
   const days = [];
-  for (let index = 1; index <= data.length; index++) {
+  for (let index = 1; index <= ScheduleData.length; index++) {
     days.push("Day " + index);
   }
-  const [selectedDay, setSelectedDay] = useState<number>(0);
   console.log(selectedDay);
   return (
     <section className="m-10 my-20 flex flex-col space-y-5" id="schedule">
@@ -115,7 +140,7 @@ const Schedule = () => {
         })}
       </div>
       <div className="flex flex-wrap bg-[#252A6C]  rounded-lg  py-5">
-        {data[selectedDay].map((day, index) => {
+        {ScheduleData[selectedDay].days.map((day, index) => {
           const itemsPerRow = 3;
           const rowNumber = Math.floor(index / itemsPerRow);
 
