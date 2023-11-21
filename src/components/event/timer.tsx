@@ -30,7 +30,7 @@ const Timer = () => {
   }, []);
 
   return (
-    <div className="flex items-center justify-center z-10 relative -mt-20">
+    <div className="flex items-center justify-center z-20 relative -mt-20">
       <div className=" flex flex-row h-[151px] w-[1028px] bg-[#FFF974] rounded-lg items-center justify-between space-x-10 p-10">
         <div className=" w-[253px] space-y-3">
           <div className="font-ChangaOne text-3xl">
