@@ -35,7 +35,7 @@ const NavBar = () => {
               <button>HOME</button>
             </Link>
             <button>ABOUT</button>
-            <button>HOW TO SELL everything?</button>
+            <button>HOW TO SELL?</button>
             <button>CONTACT</button>
             <button className="text-black bg-[#FFF974] px-5 rounded-full h-[44px]">
               LOGIN
