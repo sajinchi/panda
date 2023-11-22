@@ -1,34 +1,33 @@
 "use client";
-import React, { useState } from "react";
-import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
-import "swiper/css/pagination";
-
-// import "../../../app/styles.css";
-import styles from "./firstCarousel.module.css";
-
-import { FaLocationDot } from "react-icons/fa6";
-import { useRouter } from "next/navigation";
 import Link from "next/link";
+import "swiper/css/pagination";
+import { useEffect, useState } from "react";
+import { FaLocationDot } from "react-icons/fa6";
+import { Swiper, SwiperSlide } from "swiper/react";
 
-export interface EventsData {
-  id: string;
-  image: string;
-  date: string;
-  title: string;
-  location: string;
-}
+import { getEventList } from "@/services/eventslist.service";
+import { IEventsData } from "@/types/IEventType";
 
 export default function App() {
-  const router = useRouter();
   const [activeindex, setActiveindex] = useState(0);
-  const [events] = useState<EventsData[]>([
+
+  // const eventList = async() => {
+  //   const events = await getEventList()
+  // }
+  // useEffect(()=>{
+  //   eventList();
+  // },[])
+  const [events] = useState<IEventsData[]>([
     {
       id: "1",
       image: "/5.png",
       date: "2023-08-18T05:23:37.023273Z",
       title: "Live Event",
       location: "Marriot Hotel, Baluwatar",
+      price: "40",
+      category: "Sports",
+      time:"1:00 P.M."
     },
     {
       id: "2",
@@ -36,6 +35,9 @@ export default function App() {
       date: "2023-08-18T05:23:37.023273Z",
       title: "Live Event go go Live",
       location: "Marriot Hotel, Baluwatar",
+      price: "40",
+      category: "Sports",
+      time:"1:00 P.M."
     },
     {
       id: "3",
@@ -43,6 +45,9 @@ export default function App() {
       date: "2023-08-18T05:23:37.023273Z",
       title: "Live Event",
       location: "Marriot Hotel, Baluwatar",
+      price: "40",
+      category: "Sports",
+      time:"1:00 P.M."
     },
     {
       id: "4",
@@ -50,6 +55,9 @@ export default function App() {
       date: "2023-08-18T05:23:37.023273Z",
       title: "Live Event goooo",
       location: "Marriot Hotel, Baluwatar",
+      price: "40",
+      category: "Sports",
+      time:"1:00 P.M."
     },
     {
       id: "5",
@@ -57,6 +65,9 @@ export default function App() {
       date: "2023-08-18T05:23:37.023273Z",
       title: "Live Event",
       location: "Marriot Hotel, Baluwatar",
+      price: "40",
+      category: "Sports",
+      time:"1:00 P.M."
     },
     {
       id: "6",
@@ -64,6 +75,9 @@ export default function App() {
       date: "2023-08-18T05:23:37.023273Z",
       title: "Live Event",
       location: "Marriot Hotel, Baluwatar",
+      price: "40",
+      category: "Sports",
+      time:"1:00 P.M."
     },
     {
       id: "7",
@@ -71,6 +85,9 @@ export default function App() {
       date: "2023-08-18T05:23:37.023273Z",
       title: "Live Event",
       location: "Marriot Hotel, Baluwatar",
+      price: "40",
+      category: "Sports",
+      time:"1:00 P.M."
     },
     {
       id: "8",
@@ -78,6 +95,9 @@ export default function App() {
       date: "2023-08-18T05:23:37.023273Z",
       title: "Live Event",
       location: "Marriot Hotel, Baluwatar",
+      price: "40",
+      category: "Sports",
+      time:"1:00 P.M."
     },
     {
       id: "9",
@@ -85,6 +105,9 @@ export default function App() {
       date: "2023-08-18T05:23:37.023273Z",
       title: "Live Event",
       location: "Marriot Hotel, Baluwatar",
+      price: "40",
+      category: "Sports",
+      time:"1:00 P.M."
     },
     {
       id: "10",
@@ -92,8 +115,12 @@ export default function App() {
       date: "2023-08-18T05:23:37.023273Z",
       title: "Live Event",
       location: "Marriot Hotel, Baluwatar",
+      price: "40",
+      category: "Sports",
+      time:"1:00 P.M."
     },
   ]);
+  
   // updated the array with specific date and time
   const updatedEvents = events.map((event) => {
     const dateObj = new Date(event.date);

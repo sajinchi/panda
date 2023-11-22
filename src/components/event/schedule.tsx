@@ -1,21 +1,12 @@
 "use client";
-import React, { useState } from "react";
 import Image from "next/image";
+import React, { useState } from "react";
 
-interface Event {
-  image: string;
-  time: string;
-  act_type: string;
-  artist: string;
-}
-
-interface ScheduleTypes {
-  days: Event[];
-}
+import { IScheduleTypes } from "@/types/IScheduleTypes";
 
 const Schedule = () => {
   const [selectedDay, setSelectedDay] = useState<number>(0);
-  const ScheduleData: ScheduleTypes[] = [
+  const ScheduleData: IScheduleTypes[] = [
     {
       days: [
         {

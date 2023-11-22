@@ -6,19 +6,10 @@ import { ConfigProvider, Slider } from "antd";
 import { IoLocationSharp } from "react-icons/io5";
 
 import TicketTable from "./ticketTable";
-
-export interface TicketData{
-  key: number;
-  name: string;
-  quantity: number;
-  price: number;
-  type: string;
-  category: string;
-}
+import { ITicketData } from "@/types/ITicketDataType";
 
 const SeatSelection = () => {
-
-  const [data] = useState<TicketData[]>([
+  const [data] = useState<ITicketData[]>([
     {
       key: 1,
       name: `Section 1`,
@@ -213,9 +204,9 @@ quantitiesCategories.sort((a, b) => a - b);
 
 
     const [priceRangeState, setPriceRangeState] = useState(false);  
-    const [filteredData, setFilteredData] = useState<TicketData[]>([]);
-    const [priceFilteredData, setPriceFilteredData] = useState<TicketData[]>([]);
-    const [priceOnlyFilteredData, setPriceOnlyFilteredData] = useState<TicketData[]>(data);
+    const [filteredData, setFilteredData] = useState<ITicketData[]>([]);
+    const [priceFilteredData, setPriceFilteredData] = useState<ITicketData[]>([]);
+    const [priceOnlyFilteredData, setPriceOnlyFilteredData] = useState<ITicketData[]>(data);
     const [quantityState, setQuantityState] = useState(false);
     const [quantityValue, setQuantityValue] = useState<number>(0);
     const [currentValue,setCurrentValue] = useState<number[]>([min,max]);

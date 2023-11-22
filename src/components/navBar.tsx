@@ -1,7 +1,8 @@
 import React from "react";
+import Link from "next/link";
 import Image from "next/image";
 import { FiSearch } from "react-icons/fi";
-import Link from "next/link";
+
 const NavBar = () => {
   return (
     <div>

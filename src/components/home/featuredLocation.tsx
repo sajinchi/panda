@@ -1,20 +1,14 @@
 "use client";
 import Image from "next/image";
 import React, { useState } from "react";
-import { BsArrowRight } from "react-icons/bs";
 import { GoDotFill } from "react-icons/go";
+import { BsArrowRight } from "react-icons/bs";
 
-interface LocationDetails {
-  image: string;
-  title: string;
-  location: string;
-  seats: number;
-  popularFor: string[];
-  upcomingEvents: number;
-}
+import { ILocationDetails } from "@/types/ILocationDetailType";
+
 
 const FeaturedLocation = () => {
-  const [locationDetails] = useState<LocationDetails[]>([
+  const [locationDetails] = useState<ILocationDetails[]>([
     {
       image: "/s1.jpeg",
       title: "Dashrath Stadium",
@@ -66,7 +60,7 @@ const FeaturedLocation = () => {
   ]);
   return (
     <div className=" text-white mx-20">
-      <div className=" flex flex-row justify-between my-10">
+      <div className=" flex flex-wrap justify-between my-10">
         <div className="font-ChangaOne text-4xl  ">Featured Location</div>
         <button className="font-ChangaOne text-base flex flex-row items-center space-x-2 "><span>See all</span><BsArrowRight/></button>
       </div>

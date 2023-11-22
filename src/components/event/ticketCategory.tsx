@@ -3,13 +3,10 @@ import Image from 'next/image'
 import React, { useState } from 'react'
 import { BsArrowRight } from 'react-icons/bs'
 
-interface TicketTypes {
-    type: string;
-    price: number
-}
+import { ITicketTypes } from '@/types/ITicketTypes';
 
 const TicketCategory = () => {
-    const [ticketTypes] = useState<TicketTypes[]>([
+    const [ticketTypes] = useState<ITicketTypes[]>([
         {
             type: "Standard Ticket",
             price: 5000

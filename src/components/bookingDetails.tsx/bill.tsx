@@ -1,12 +1,10 @@
 "use client";
 import React, { useState } from "react";
 
-interface BillDataType {
-  quantity: number;
-  price: number;
-}
+import { IBillDataType } from "@/types/IBillDataType";
+
 const Bill = () => {
-  const [billData] = useState<BillDataType>({
+  const [billData] = useState<IBillDataType>({
     quantity: 5,
     price: 500,
   });

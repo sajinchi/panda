@@ -2,22 +2,12 @@ import React from 'react';
 import Image from 'next/image';
 import {IoIosCall} from "react-icons/io"
 import {IoLocationSharp} from "react-icons/io5"
-import { BsCalendarEvent, BsTwitter } from 'react-icons/bs';
+import { BsCalendarEvent } from 'react-icons/bs';
 
-
-interface EventDetails{
-    title: string;
-    description: string;
-    location: string;
-    date: string;
-    contact: string;
-    image: string;
-    organizer: string
-    organizer_image: string 
-}
+import { ISingleEventDetail } from '@/types/ISingleEventDetailType';
 
 const BasicInfo = () => {
-    const event:EventDetails = {
+    const event:ISingleEventDetail = {
         title: 'Arjit Singh Solo Concert',
         description: 'Get ready to embark on a musical journey like no other as the legendary Indian playback singer, Arijit Singh concert in Nepal , is all set to grace the stage. Known for his soul-stirring melodies, Arijit Singh has captured the hearts of millions around the world. This eagerly anticipated Arijit Singh live concert in Nepal is going to be an unforgettable experience for music enthusiasts. ',
         location: 'Hyatt Hotel, Boudha',

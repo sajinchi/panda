@@ -1,15 +1,13 @@
 "use client";
-import React, { useState } from "react";
-import { Swiper, SwiperSlide } from "swiper/react";
-import {BsArrowRight} from "react-icons/bs"
 import Image from "next/image";
+import React, { useState } from "react";
+import {BsArrowRight} from "react-icons/bs"
+import { Swiper, SwiperSlide } from "swiper/react";
 
-interface NewsAndBlogs {
-  title: string;
-  image: string;
-}
+import { INewsAndBlog } from "@/types/INewsBlogsType";
+
 const NewsAndBlogs = () => {
-  const [news] = useState<NewsAndBlogs[]>([
+  const [news] = useState<INewsAndBlog[]>([
     {
       title: "Panda Entertainment Panda Entertainment Panda Entertainment Panda Entertainment",
       image: "/panda.jpg",

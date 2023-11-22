@@ -1,9 +1,9 @@
 "use client";
-import React, { useState } from 'react'
-
+import { useState } from 'react'
 import Image from 'next/image.js';
-import UpcomingEvents from './upcomingEvents'
+
 import PastEvents from './pastEvents'
+import UpcomingEvents from './upcomingEvents'
 
 const SecondCarousel = () => {
   const [enabled, setEnabled] = useState(false);

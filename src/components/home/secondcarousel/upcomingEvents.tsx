@@ -1,23 +1,16 @@
 "use client";
-import React, { useState } from "react";
-import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import Image from "next/image";
+import { useState } from "react";
 import { BsArrowRight } from "react-icons/bs";
+import { Swiper, SwiperSlide } from "swiper/react";
 
-interface EventsData {
-  image: string;
-  date: string;
-  title: string;
-  location: string;
-  price: string;
-  category: string;
-  time:string;
-}
+import { IEventsData } from "@/types/IEventType";
 
 const UpcomingEvents = () => {
-  const [events] = useState<EventsData[]>([
+  const [events] = useState<IEventsData[]>([
     {
+      id: "1",
       image: "/1.jpg",
       date: "8 SEPT, 2023",
       title: "Live Event",
@@ -27,6 +20,7 @@ const UpcomingEvents = () => {
       time:"1:00 P.M."
     },
     {
+      id: "2",
       image: "/2.jpg",
       date: "9 DEC, 2023",
       title: "Live Event",
@@ -36,6 +30,7 @@ const UpcomingEvents = () => {
       time:"12:30 P.M."
     },
     {
+      id: "3",
       image: "/3.jpg",
       date: "28 SEPT, 2023",
       title: "Live Event",
@@ -45,6 +40,7 @@ const UpcomingEvents = () => {
       time:"8:00 A.M."
     },
     {
+      id: "4",
       image: "/4.jpeg",
       date: "8 Jan, 2024",
       title: "Live Event",
@@ -54,6 +50,7 @@ const UpcomingEvents = () => {
       time:"5:00 P.M."
     },
     {
+      id: "5",
       image: "/5.png",
       date: "8 OCT, 2023",
       title: "Live Event",
