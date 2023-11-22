@@ -99,13 +99,13 @@ const UpcomingEvents = () => {
                       <div className="p-3 w-full">
                         <div className={`flex flex-wrap w-full font-ChangaOne text-base space-x-2  items-center ${hovered ? ' justify-center duration-500' : 'duration-500'}`}>
                           <div className="">{event.title}</div>
-                          <div className="flex italic text-black h-4 w-[57px] bg-white rounded-full items-center justify-center text-xs">{event.category}</div>
+                          <div className=" italic text-black h-4 w-[57px] bg-white rounded-full items-center justify-center text-xs">{event.category}</div>
                         </div>
                         <div className={`flex flex-row font-Amaranath italic text-sm space-x-2 ${hovered ? ' ml-[20%] duration-500' : 'duration-500'}`}><span><FaLocationDot /></span><span>{event.location}</span></div>
                       </div>
                       <div className={`flex w-full ${hovered ? 'flex-col space-y-5 duration-500 ':'justify-between'} items-center `}>
                         <div className="font-ChangaOne text-base space-x-2 underline"><span>{event.time}</span><span>onwards</span></div>
-                        <button className="flex font-ChangaOne text-base underline items-center"><span>Buy Tickets</span><BsArrowRight/></button>
+                        <button className="flex font-ChangaOne text-base underline items-center space-x-2"><span>Buy Tickets</span><BsArrowRight/></button>
                       </div>
                     </div>
                     </div>

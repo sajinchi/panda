@@ -82,7 +82,7 @@ const FeaturedLocation = () => {
           return (
             <div
               key={index}
-              className={` min-w-[350px] h-full rounded-2xl border-2  ${hovered ? "border-[#6F78F4]" : "border-[#252A6C]" } duration-700 overflow-hidden relative items-center`}
+              className={` min-w-[350px] h-full overflow-hidden rounded-2xl border-2  ${hovered ? "border-[#6F78F4]" : "border-[#252A6C]" } duration-700  relative items-center`}
               onMouseEnter={()=>setHovered(true)}
               onMouseLeave={()=>setHovered(false)}
             >
