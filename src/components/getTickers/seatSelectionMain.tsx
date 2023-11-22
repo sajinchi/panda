@@ -8,7 +8,7 @@ const SeatSelectionMain = () => {
     <div>
         <div className="font-ChangaOne text-3xl my-5">Select your seat</div>
         <div className='flex flex-row  w-full space-x-5'>
-            <SeatSelection />
+            <SeatSelection/>
             <SeatLayout/>
         </div>
     </div>

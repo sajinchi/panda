@@ -185,7 +185,7 @@ export default function App() {
                       style={{ objectFit: "cover" }}
                     />
                   </div>
-                  <div className="flex flex-col text-white items-center ">
+                  <div className="flex flex-col text-white items-center pt-10 ">
                     <div className="font-ChangaOne text-lg space-x-2">
                       <span>{event.date}</span>
                       <span className="text-black bg-[#FFF974] rounded-full p-2 ">

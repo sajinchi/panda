@@ -195,8 +195,8 @@ const SeatSelection = () => {
       minPrice = item.price;
     }
   }
-  const min=minPrice;
-  const max=maxPrice;
+  const min = minPrice;
+  const max = maxPrice;
 
   //Finding the Quantity categories
 

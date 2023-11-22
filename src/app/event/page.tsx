@@ -10,7 +10,6 @@ import { useSearchParams } from 'next/navigation';
 const Event = () => {
   const searchParams = useSearchParams();
   const id = searchParams.get("id");
-  console.log(id);
   return (
     <div className="bg-[#151841] h-auto space-y-5">
     <NavBar />
