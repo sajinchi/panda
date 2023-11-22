@@ -1,13 +1,14 @@
 "use client";
 import Image from "next/image";
-import React, { useState } from "react";
 import {BsArrowRight} from "react-icons/bs"
+import { useEffect, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 import { INewsAndBlog } from "@/types/INewsBlogsType";
+import { IGetNewsandBlogListResponse, getNewsandBlogList } from "@/services/newsandblogs.service";
 
 const NewsAndBlogs = () => {
-  const [news] = useState<INewsAndBlog[]>([
+  const [news, setNews] = useState<INewsAndBlog[]>([
     {
       title: "Panda Entertainment Panda Entertainment Panda Entertainment Panda Entertainment",
       image: "/panda.jpg",
@@ -45,6 +46,18 @@ const NewsAndBlogs = () => {
       image: "/s2.jpg",
     },
   ]);
+
+
+        // const newsBlogList = async () => {
+        //   const response: IGetNewsandBlogListResponse = await getNewsandBlogList();
+        //   if (response.status == 200) {
+        //     setNews(response.data);
+        //   }
+        // };
+        // useEffect(() => {
+        //   newsBlogList();
+        // }, []);
+
   return (
     <div className="mx-20 mt-10 font-ChangaOne text-white">
       <div className="text-4xl my-10">News and Blogs</div>

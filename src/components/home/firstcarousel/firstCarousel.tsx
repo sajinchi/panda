@@ -6,19 +6,12 @@ import { useEffect, useState } from "react";
 import { FaLocationDot } from "react-icons/fa6";
 import { Swiper, SwiperSlide } from "swiper/react";
 
-import { getEventList } from "@/services/eventslist.service";
+import { IGetEventListResponse, getEventList } from "@/services/eventslist.service";
 import { IEventsData } from "@/types/IEventType";
 
 export default function App() {
   const [activeindex, setActiveindex] = useState(0);
-
-  // const eventList = async() => {
-  //   const events = await getEventList()
-  // }
-  // useEffect(()=>{
-  //   eventList();
-  // },[])
-  const [events] = useState<IEventsData[]>([
+  const [events, setEvents ] = useState<IEventsData[]>([
     {
       id: "1",
       image: "/5.png",
@@ -120,6 +113,16 @@ export default function App() {
       time:"1:00 P.M."
     },
   ]);
+
+  // const eventList = async () => {
+  //   const response: IGetEventListResponse = await getEventList();
+  //   if (response.status == 200) {
+  //     setEvents(response.data);
+  //   }
+  // };
+  // useEffect(() => {
+  //   eventList();
+  // }, []);
   
   // updated the array with specific date and time
   const updatedEvents = events.map((event) => {

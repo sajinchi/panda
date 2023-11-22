@@ -1,14 +1,15 @@
 "use client";
 import "swiper/css";
 import Image from "next/image";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { BsArrowRight } from "react-icons/bs";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 import { IEventsData } from "@/types/IEventType";
+import { IGetUpcomingEventListResponse, getUpcomingEventList } from "@/services/upcomingevent.service";
 
 const UpcomingEvents = () => {
-  const [events] = useState<IEventsData[]>([
+  const [events, setEvents] = useState<IEventsData[]>([
     {
       id: "1",
       image: "/1.jpg",
@@ -58,8 +59,20 @@ const UpcomingEvents = () => {
       price: "40",
       category: "Sports",
       time:"2:00 P.M."
-    },
+    }
   ]);
+
+    // const upcomingEventList = async () => {
+    //   const response: IGetUpcomingEventListResponse =
+    //     await getUpcomingEventList();
+    //   if (response.status == 200) {
+    //     setEvents(response.data);
+    //   }
+    // };
+    // useEffect(() => {
+    //   upcomingEventList();
+    // }, []);
+
   return (
     <div className="transition ease-in-out duration-500">
 

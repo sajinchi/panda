@@ -1,14 +1,15 @@
 "use client";
 import Image from "next/image";
-import React, { useState } from "react";
+import { useEffect, useState } from "react";
 import { GoDotFill } from "react-icons/go";
 import { BsArrowRight } from "react-icons/bs";
 
 import { ILocationDetails } from "@/types/ILocationDetailType";
+import { IGetFeaturedLocationListResponse, getFeaturedLoactionList } from "@/services/featuredlocation.service";
 
 
 const FeaturedLocation = () => {
-  const [locationDetails] = useState<ILocationDetails[]>([
+  const [locationDetails, setLocationDetails] = useState<ILocationDetails[]>([
     {
       image: "/s1.jpeg",
       title: "Dashrath Stadium",
@@ -58,6 +59,17 @@ const FeaturedLocation = () => {
       upcomingEvents: 8,
     },
   ]);
+
+      // const upcomingEventList = async () => {
+      //   const response: IGetFeaturedLocationListResponse = await getFeaturedLoactionList();
+      //   if (response.status == 200) {
+      //     setLocationDetails(response.data);
+      //   }
+      // };
+      // useEffect(() => {
+      //   upcomingEventList();
+      // }, []);
+
   return (
     <div className=" text-white mx-20">
       <div className=" flex flex-wrap justify-between my-10">

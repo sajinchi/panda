@@ -1,15 +1,15 @@
 import axios from "axios";
 
-import { ILocationDetails } from "@/types/ILocationDetailType";
+import { IEventsData } from "@/types/IEventType";
 import { INetwortRequestResponseState } from "@/types/INetworkRequestResponseState";
 
-export interface IGetFeaturedLocationListResponse extends INetwortRequestResponseState {
-  data?: ILocationDetails[];
+export interface IGetUpcomingEventListResponse extends INetwortRequestResponseState {
+  data?: IEventsData[];
 }
-export const getFeaturedLoactionList = async () => {
+export const getUpcomingEventList = async () => {
   try {
     const response = await axios.get();
-    let result: IGetFeaturedLocationListResponse = {
+    let result: IGetUpcomingEventListResponse = {
       status: response.status,
       message: response.statusText,
       data: response.data,
@@ -17,13 +17,13 @@ export const getFeaturedLoactionList = async () => {
     return result;
   } catch (error) {
     if (axios.isAxiosError(error)) {
-      const result: IGetFeaturedLocationListResponse = {
+      const result: IGetUpcomingEventListResponse = {
         status: error.response!.status,
         message: error.response!.data.detail,
       };
       return result;
     } else {
-      const result: IGetFeaturedLocationListResponse = {
+      const result: IGetUpcomingEventListResponse = {
         status: 400,
         message: "Unknown Error",
       };
