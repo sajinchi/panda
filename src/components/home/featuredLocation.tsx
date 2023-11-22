@@ -94,7 +94,7 @@ const FeaturedLocation = () => {
               />
               <div className=" relative ">
                 <div className={`flex flex-row justify-between items-center 
-                ${hovered ? " mb-32 duration-1000":"mb-72 duration-1000"}
+                ${hovered ? " mb-32 duration-700":"mb-72 duration-700"}
                 `}>
                   <button className="p-2 m-2 bg-[#151841] hover:bg-[#6F78F4] rounded-lg">
                     <Image

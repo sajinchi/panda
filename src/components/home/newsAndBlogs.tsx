@@ -73,7 +73,7 @@ const NewsAndBlogs = () => {
                   <span className="flex font-ChangaOne text-base text-left  overflow-hidden h-12 text-ellipsis">
                     {event.title}
                   </span>
-                  <button className=" flex flex-row font-Amaranath text-sm "><span>View Details</span> <BsArrowRight/></button>
+                  <button className=" flex flex-row font-Amaranath text-sm items-center space-x-2 "><span>View Details</span> <BsArrowRight/></button>
                   
                 </div>
               </div>
