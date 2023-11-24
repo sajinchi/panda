@@ -77,7 +77,12 @@ const Timer = () => {
             <span className="font-Amaranath text-lg">Seconds</span>
           </div>
         </div>
-        <Link href={"/getTickets"}>
+        <Link
+            href={{
+            pathname: "./getTickets",
+            query: "cate="
+            }}
+          >
           <button className=" h-14 w-48 rounded-full bg-[#252A6C] font-ChangaOne text-lg text-white flex items-center justify-center space-x-2">
             <span>Get Ticket</span>
             <span className="text-2xl">
