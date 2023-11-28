@@ -4,10 +4,8 @@ import React, { useState } from "react";
 import { useForm } from "react-hook-form";
 import { IoMdEye, IoMdEyeOff } from "react-icons/io";
 
-interface LoginFormData {
-  username: string;
-  password: string;
-}
+import { ILoginFormData } from "@/types/ILoginFormData";
+import { LoginService } from "@/services/login.service";
 
 const LogIn = () => {
   const [passwordState, setPasswordState] = useState(false);
@@ -15,11 +13,13 @@ const LogIn = () => {
     register,
     handleSubmit,
     formState: { errors },
-  } = useForm<LoginFormData>({ mode: "all" });
+  } = useForm<ILoginFormData>({ mode: "all" });
 
-  const onSubmit = (data:LoginFormData) => {
-    console.log(data.password, data.username);
+  const onSubmit = async(data:ILoginFormData) => {
+    //api call for login
+    let response = await LoginService(data.username,data.password);
   }
+
 
   return (
     <div className="w-2/6  rounded-2xl p-5 py-10">

@@ -3,13 +3,9 @@ import React, { useState } from "react";
 import { useForm } from "react-hook-form";
 import { IoMdEye, IoMdEyeOff, IoMdArrowRoundBack } from "react-icons/io";
 
-interface SignUpData {
-  firstname: string;
-  lastname: string;
-  email: string;
-  password: string;
-  repassword: string;
-}
+import { ISignUpData } from "@/types/IsignUpData";
+import Link from "next/link";
+import { SignUpService } from "@/services/signup.service";
 
 const SignUp = () => {
   const [passwordState, setPasswordState] = useState(false);
@@ -19,13 +15,17 @@ const SignUp = () => {
     handleSubmit,
     watch,
     formState: { errors },
-  } = useForm<SignUpData>({ mode: "all" });
+  } = useForm<ISignUpData>({ mode: "all" });
 
-  const onSubmit = (data: SignUpData) => {};
+  const onSubmit = async(data: ISignUpData) => {
+    // api call for creating new account
+    let response = await SignUpService(data.firstname,data.lastname,data.email,data.password);
+
+  };
   return (
-    <div className="w-2/6 p-5 py-10">
+    <div className="w-2/6 p-5 py-5">
       <div className="flex flex-row items-center text-white font-ChangaOne text-xl my-5 space-x-2">
-        <span><IoMdArrowRoundBack /></span>
+        <Link href={'./login'}><span><IoMdArrowRoundBack /></span></Link>
         <span>Create a New Account</span>
       </div>
       <form
