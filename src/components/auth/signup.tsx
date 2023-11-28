@@ -1,10 +1,10 @@
 "use client";
+import Link from "next/link";
 import React, { useState } from "react";
 import { useForm } from "react-hook-form";
 import { IoMdEye, IoMdEyeOff, IoMdArrowRoundBack } from "react-icons/io";
 
 import { ISignUpData } from "@/types/ISignUpData";
-import Link from "next/link";
 import { SignUpService } from "@/services/signup.service";
 
 const SignUp = () => {

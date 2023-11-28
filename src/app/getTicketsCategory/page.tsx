@@ -2,15 +2,15 @@
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { BiArrowBack } from "react-icons/bi";
+import { IoMdCalendar } from "react-icons/io";
 import { useSearchParams } from "next/navigation";
+import { IoLocationSharp } from "react-icons/io5";
 
 import NavBar from "@/components/navBar";
 import Footer from "@/components/footer";
 import { ITicketData } from "@/types/ITicketDataType";
 import SeatLayout from "@/components/getTickers/seatLayout";
 import TicketTable from "@/components/getTickers/ticketTable";
-import { IoMdCalendar } from "react-icons/io";
-import { IoLocationSharp } from "react-icons/io5";
 
 const GetTicketsCategory = () => {
   const searchParams = useSearchParams();
