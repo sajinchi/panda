@@ -6,7 +6,7 @@ import { INetwortRequestResponseState } from "@/types/INetworkRequestResponseSta
 export interface IGetNewsandBlogListResponse extends INetwortRequestResponseState {
   data?: INewsAndBlog[];
 }
-export const getNewsandBlogList = async () => {
+export const GetNewsandBlogListService = async () => {
   try {
     const response = await axios.get();
     let result: IGetNewsandBlogListResponse = {

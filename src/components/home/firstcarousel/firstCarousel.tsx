@@ -6,7 +6,7 @@ import { useEffect, useState } from "react";
 import { FaLocationDot } from "react-icons/fa6";
 import { Swiper, SwiperSlide } from "swiper/react";
 
-import { IGetEventListResponse, getEventList } from "@/services/eventslist.service";
+import { IGetEventListResponse, GetEventListService } from "@/services/eventslist.service";
 import { IEventsData } from "@/types/IEventType";
 
 export default function App() {
@@ -115,7 +115,7 @@ export default function App() {
   ]);
 
   // const eventList = async () => {
-  //   const response: IGetEventListResponse = await getEventList();
+  //   const response: IGetEventListResponse = await GetEventListService();
   //   if (response.status == 200) {
   //     setEvents(response.data);
   //   }

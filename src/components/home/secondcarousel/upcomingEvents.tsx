@@ -7,7 +7,7 @@ import { FaLocationDot } from "react-icons/fa6";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 import { IEventsData } from "@/types/IEventType";
-import { IGetUpcomingEventListResponse, getUpcomingEventList } from "@/services/upcomingevent.service";
+import { IGetUpcomingEventListResponse, GetUpcomingEventListService } from "@/services/upcomingevent.service";
 
 const UpcomingEvents = () => {
   const [events, setEvents] = useState<IEventsData[]>([
@@ -65,7 +65,7 @@ const UpcomingEvents = () => {
 
     // const upcomingEventList = async () => {
     //   const response: IGetUpcomingEventListResponse =
-    //     await getUpcomingEventList();
+    //     await GetUpcomingEventListService();
     //   if (response.status == 200) {
     //     setEvents(response.data);
     //   }

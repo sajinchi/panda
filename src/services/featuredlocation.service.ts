@@ -6,7 +6,7 @@ import { INetwortRequestResponseState } from "@/types/INetworkRequestResponseSta
 export interface IGetFeaturedLocationListResponse extends INetwortRequestResponseState {
   data?: ILocationDetails[];
 }
-export const getFeaturedLoactionList = async () => {
+export const GetFeaturedLoactionListService = async () => {
   try {
     const response = await axios.get();
     let result: IGetFeaturedLocationListResponse = {

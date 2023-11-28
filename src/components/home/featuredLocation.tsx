@@ -5,7 +5,7 @@ import { GoDotFill } from "react-icons/go";
 import { BsArrowRight } from "react-icons/bs";
 
 import { ILocationDetails } from "@/types/ILocationDetailType";
-import { IGetFeaturedLocationListResponse, getFeaturedLoactionList } from "@/services/featuredlocation.service";
+import { IGetFeaturedLocationListResponse, GetFeaturedLoactionListService } from "@/services/featuredlocation.service";
 
 
 const FeaturedLocation = () => {
@@ -61,7 +61,7 @@ const FeaturedLocation = () => {
   ]);
 
       // const upcomingEventList = async () => {
-      //   const response: IGetFeaturedLocationListResponse = await getFeaturedLoactionList();
+      //   const response: IGetFeaturedLocationListResponse = await GetFeaturedLoactionListService();
       //   if (response.status == 200) {
       //     setLocationDetails(response.data);
       //   }

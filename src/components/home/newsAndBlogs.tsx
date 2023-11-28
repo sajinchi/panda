@@ -5,7 +5,7 @@ import { useEffect, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 import { INewsAndBlog } from "@/types/INewsBlogsType";
-import { IGetNewsandBlogListResponse, getNewsandBlogList } from "@/services/newsandblogs.service";
+import { IGetNewsandBlogListResponse, GetNewsandBlogListService } from "@/services/newsandblogs.service";
 
 const NewsAndBlogs = () => {
   const [news, setNews] = useState<INewsAndBlog[]>([
@@ -49,7 +49,7 @@ const NewsAndBlogs = () => {
 
 
         // const newsBlogList = async () => {
-        //   const response: IGetNewsandBlogListResponse = await getNewsandBlogList();
+        //   const response: IGetNewsandBlogListResponse = await GetNewsandBlogListService();
         //   if (response.status == 200) {
         //     setNews(response.data);
         //   }
