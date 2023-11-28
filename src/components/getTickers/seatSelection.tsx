@@ -8,8 +8,9 @@ import { IoLocationSharp } from "react-icons/io5";
 import TicketTable from "./ticketTable";
 import { ITicketData } from "@/types/ITicketDataType";
 
-const SeatSelection = () => {
-  const [data] = useState<ITicketData[]>([
+const SeatSelection = (props:{ ticketData:ITicketData[]}) => {
+  const [data] = useState<ITicketData[]>(
+    [
     {
       key: 1,
       name: `Section 1`,
@@ -169,9 +170,9 @@ const SeatSelection = () => {
       price: 20000,
       type: "Best View",
       category:"vip",
-    },
-    
-  ]);
+    },  
+  ]
+  );
 
   // Finding minimum and maximum price and assigning to min and max variables
   let maxPrice = 0;

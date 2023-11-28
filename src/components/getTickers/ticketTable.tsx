@@ -80,7 +80,7 @@ const TicketTable = (props: { priceRangeState: boolean; data: ITicketData[]; }) 
               <tr key={index} className="text-base font-ChangaOne h-[52px]  ">
                 <td
                   className={` flex flex-col text-left border-l-4 pl-2 ${
-                    data.category == "vip" ? "border-[#FF897D]" : "border-white"
+                    data.category == "VVIP" ? "border-[#FF897D]" : "border-white"
                   } `}
                 >
                   <span>{data.name}</span>
