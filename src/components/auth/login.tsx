@@ -1,4 +1,5 @@
 "use client";
+import Link from "next/link";
 import React, { useState } from "react";
 import { useForm } from "react-hook-form";
 import { IoMdEye, IoMdEyeOff } from "react-icons/io";
@@ -21,7 +22,7 @@ const LogIn = () => {
   }
 
   return (
-    <div className="w-2/6 bg-[#040371] rounded-2xl p-5 py-10">
+    <div className="w-2/6  rounded-2xl p-5 py-10">
       <div className=" text-white font-ChangaOne text-xl text-center">
         LOGIN
       </div>
@@ -55,6 +56,11 @@ const LogIn = () => {
                     {...register("password", {
                         required: { value: true, message: "*Password is required" },
                         min: 1,
+                        pattern: {
+                          value:
+                            /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/,
+                          message: "Password must be minimum 8 characters, at least one uppercase letter, one lowercase letter, one number and one special character",
+                        },
                     })}
                     />
                     <button
@@ -73,6 +79,9 @@ const LogIn = () => {
           LOGIN
         </button>
       </form>
+      <Link href={'/signup'}>
+      <button className="flex w-full items-center justify-center my-5 text-white font-Amaranath underline" >Sign Up</button>
+      </Link>
     </div>
   );
 };
