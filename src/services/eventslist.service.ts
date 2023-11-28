@@ -6,7 +6,7 @@ import { INetwortRequestResponseState } from "@/types/INetworkRequestResponseSta
 export interface IGetEventListResponse extends INetwortRequestResponseState {
   data?: IEventsData[];
 }
-export const getEventList = async () => {
+export const GetEventListService = async () => {
   try {
     const response = await axios.get();
     let result: IGetEventListResponse = {
